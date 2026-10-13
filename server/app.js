@@ -1,5 +1,4 @@
 const express = require('express');
-app.set('trust proxy', 1);
 const helmet = require('helmet');
 const cors = require('cors');
 const enquiryRoutes = require('./routes/enquiryRoutes');
@@ -7,6 +6,9 @@ const { apiLimiter } = require('./middleware/rateLimiters');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
+
+// Needed on Render/Vercel etc. so rate limiting sees the real client IP
+app.set('trust proxy', 1);
 
 app.disable('x-powered-by');
 app.use(helmet());
