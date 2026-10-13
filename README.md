@@ -7,7 +7,7 @@ It has a drone-themed website, a rule-based chatbot (no external AI API), an enq
 
 > This is an independent demo. All services and courses shown are **sample content** and not official DroneTV information. The design is original and does not copy dronetv.in.
 
-**Live demo:** http://localhost:5173/
+**Live demo:** https://dronetv-assistant.vercel.app
 
 
 ## Features
